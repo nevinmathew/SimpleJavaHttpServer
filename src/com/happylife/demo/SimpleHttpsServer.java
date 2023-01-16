@@ -31,6 +31,7 @@ public class SimpleHttpsServer {
 			this.port = port;
 			// load certificate
 			String keystoreFilename = getPath() + "mycert.keystore";
+			keystoreFilename = keystoreFilename.replace("%20", " ");
 			char[] storepass = "mypassword".toCharArray();
 			char[] keypass = "mypassword".toCharArray();
 			String alias = "alias";
